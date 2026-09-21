@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#941526">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="ГородЧат">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+  <title>ГородЧат</title>
+</head>
+<body>
+<main class="phone">
+  <header class="topbar">
+    <div class="logo">✿</div>
+    <div class="title"><b>ГородЧат</b><small>Интернет-версия</small></div>
+    <div id="online" class="online">—</div>
+  </header>
+
+  <section id="setup" class="setup">
+    <div class="pixel-avatar">🐱</div>
+    <h1>Добро пожаловать</h1>
+    <p>Придумай анонимный ник. Телефон и регистрация не нужны.</p>
+    <input id="name" maxlength="24" placeholder="Например: Кот_481" autocomplete="off">
+    <button id="join">Войти в чат</button>
+    <div id="status" class="hint">Подключение к серверу происходит после входа.</div>
+  </section>
+
+  <section id="app" class="app hidden">
+    <div class="roombar">
+      <span>🏙️</span>
+      <div><b>Общий чат</b><small>ГородЧат</small></div>
+      <button id="menu" aria-label="Меню">☰</button>
+    </div>
+    <div id="messages" class="messages"></div>
+    <form id="form" class="composer">
+      <button type="button" id="smile">☺</button>
+      <input id="text" maxlength="1000" placeholder="Написать сообщение..." autocomplete="off">
+      <button class="send" type="submit">➤</button>
+    </form>
+    <nav class="softkeys">
+      <button id="myname">Профиль</button>
+      <button id="clear">Очистить</button>
+    </nav>
+  </section>
+
+  <div id="menuPanel" class="modal hidden">
+    <div class="modalBox">
+      <h2>Меню</h2>
+      <button id="changeName">✏️ Сменить ник</button>
+      <button id="about">ℹ️ О ГородЧате</button>
+      <button id="closeMenu">← Назад</button>
+    </div>
+  </div>
+</main>
+
+<!-- Supabase client -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

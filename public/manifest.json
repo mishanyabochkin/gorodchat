@@ -1,0 +1,9 @@
+{
+  "name": "ГородЧат",
+  "short_name": "ГородЧат",
+  "lang": "ru",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#941526",
+  "background_color": "#111111"
+}

@@ -1,0 +1,40 @@
+*{box-sizing:border-box}
+:root{--red:#941526;--red2:#bd2637;--blue:#b9d8f4;--paper:#e9e9e9;--ink:#17202a}
+html,body{margin:0;min-height:100%;background:#111;font-family:Tahoma,Verdana,Arial,sans-serif;color:var(--ink)}
+body{display:flex;justify-content:center}
+button,input{font:inherit}
+.phone{width:100%;max-width:520px;min-height:100vh;background:#d7d7d7;box-shadow:0 0 30px #000}
+.topbar{height:62px;background:linear-gradient(#b62a3a,#7e0f1d);color:white;display:flex;align-items:center;padding:8px 12px;border-bottom:3px solid #4c0710;gap:10px}
+.logo{font-size:34px;line-height:1}
+.title{display:flex;flex-direction:column;flex:1;text-shadow:1px 1px #45000a}
+.title b{font-size:20px}.title small{font-size:11px;opacity:.9}
+.online{background:#3b963f;border:2px solid #d7ffd7;border-radius:12px;min-width:34px;text-align:center;padding:3px 7px;font-weight:bold}
+.setup{min-height:calc(100vh - 62px);padding:42px 24px;text-align:center;background:linear-gradient(#eeeeee,#cfcfcf)}
+.pixel-avatar{font-size:62px;margin:20px}
+h1{font-size:24px;margin:10px 0}
+p{line-height:1.45}
+input{border:2px solid #777;background:#fff;padding:13px 12px;border-radius:4px;outline:none}
+.setup input{width:100%;margin:15px 0 10px}
+button{border:0;cursor:pointer}
+.setup button,.composer .send{background:linear-gradient(#3d8bd0,#1762a5);color:white;border:2px solid #0e4678;border-radius:4px;padding:12px 18px;font-weight:bold}
+.hint{font-size:12px;color:#555;margin-top:20px}
+.hidden{display:none!important}
+.app{height:calc(100vh - 62px);display:flex;flex-direction:column}
+.roombar{display:flex;align-items:center;gap:10px;padding:8px 10px;background:#dfe9f2;border-bottom:2px solid #929292}
+.roombar>span{font-size:28px}.roombar div{flex:1;display:flex;flex-direction:column}.roombar small{font-size:11px;color:#555}
+.roombar button{font-size:24px;background:transparent}
+.messages{flex:1;overflow-y:auto;padding:10px;background:#ececec;background-image:radial-gradient(#bbb .7px,transparent .7px);background-size:7px 7px}
+.msg{max-width:90%;margin:7px 0;padding:7px 9px;border:1px solid #8b9aa8;border-radius:4px;background:#fff;box-shadow:1px 1px 0 #aaa}
+.msg.mine{margin-left:auto;background:#cfe4f7}
+.msg .meta{font-size:12px;font-weight:bold;color:#174e80;margin-bottom:3px}
+.msg .time{float:right;font-size:9px;color:#777;font-weight:normal;margin-left:12px}
+.system{font-size:11px;color:#666;text-align:center;margin:8px}
+.composer{display:flex;gap:5px;padding:8px;background:#c6c6c6;border-top:2px solid #888}
+.composer input{min-width:0;flex:1}.composer button{min-width:40px}
+#smile{background:#eee;border:1px solid #888;border-radius:4px;font-size:21px}
+.softkeys{height:38px;display:flex;background:#8b1422;border-top:2px solid #4d0710}
+.softkeys button{flex:1;background:transparent;color:#fff;font-weight:bold}
+.modal{position:fixed;inset:0;background:#0008;display:flex;align-items:center;justify-content:center;padding:20px}
+.modalBox{width:min(420px,100%);background:#ddd;border:3px solid #74101d;box-shadow:5px 5px #0008;padding:14px}
+.modalBox h2{margin:0 0 12px}.modalBox button{display:block;width:100%;text-align:left;padding:13px;background:#eee;border-bottom:1px solid #aaa}
+@media (min-width:700px){body{padding:30px 0}.phone{min-height:calc(100vh - 60px);border:4px solid #222;border-radius:18px;overflow:hidden}.app{height:calc(100vh - 122px)}}
